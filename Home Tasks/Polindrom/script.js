@@ -10,5 +10,5 @@ function checkPalindrome(string) {
     return `${string} is a palindrome`;
 }
 
-const string = prompt('Enter a string ');
+const string = prompt('Enter a string');
 console.log(checkPalindrome(string));
