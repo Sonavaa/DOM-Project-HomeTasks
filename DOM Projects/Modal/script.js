@@ -15,6 +15,11 @@ const closeModal = () => {
     overlay_el.classList.add  ("hidden");
     open_btn.classList.remove("hidden");
 }
+window.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+      showImage();
+  }
+});
 
 close_btn.addEventListener("click", closeModal);
 overlay_el.addEventListener("click", closeModal);
