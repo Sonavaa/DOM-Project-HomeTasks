@@ -1,23 +1,14 @@
 "use strict";
 
-const strNumber = prompt("Enter at least 2-digit number");
-let number = +strNumber
-if(number/10 < 1){
-    console.log("Number must have at least 2 digits");
-}
-else{
-        for(let i = 0; i <= strNumber.length; i++){
-           if(strNumber[i] == strNumber[i+1]){
-           strNumber[i] = strNumber[i+1]
+function checkPalindrome(string) {
+    const length = string.length;
+    for (let i = 0; i < length / 2; i++) {
+        if (string[i] !== string[length - 1 - i]) {
+            return `${string} is not a palindrome`;
         }
-         else{
-         for(let i = 0; i <= strNumber.length/2; i++){
-            if(strNumber[i] == strNumber[length - i]){
-        }
-         else{
-        console.log(`${strNumber} is not a polindrom`);
     }
+    return `${string} is a palindrome`;
 }
-}
-}
-}
+
+const string = prompt('Enter a string ');
+console.log(checkPalindrome(string));
